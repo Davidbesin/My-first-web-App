@@ -1,93 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My First Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to My Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="background-color: #fff5f5; color: #8b0000; font-family: Arial, sans-serif; text-align: center;">
+<body>
 
-    <h1 style="color: red; font-family: Georgia, serif;">
-        Welcome to My Website
-    </h1>
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>Hello! Welcome… again.</p>
+    </header>
 
-    <p style="font-size: 18px;">
-        Hello! Welcome......again.
-    </p>
+    <hr>
 
-    <hr style="border: 1px solid red;">
+    <main>
+        <section aria-labelledby="about">
+            <h2 id="about">About Me</h2>
+            <p>
+                I'm a computer science student who does programming,
+                game development.
+            </p>
+        </section>
 
-    <h2 style="color: red; font-family: Georgia, serif;">
-        About Me
-    </h2>
+        <section id="likes-section" aria-labelledby="likes">
+            <h2 id="likes">Things I Like</h2>
+            <ul>
+                <li>Game Development</li>
+                <li>Programming</li>
+                <li>Video Games</li>
+                <li>Still finding out…</li>
+            </ul>
+        </section>
 
-    <p style="font-size: 18px;">
-        I'm a computer science student who does programming,
-        game development.
-    </p>
+        <section id="goals-section" aria-labelledby="goals">
+            <h2 id="goals">My Goals</h2>
+            <ol>
+                <li>Become a better programmer</li>
+                <li>Finish my game/games</li>
+                <li>Build more projects</li>
+            </ol>
+        </section>
 
-    <h2 style="color: red; font-family: Georgia, serif;">
-        Things I Like
-    </h2>
+        <section aria-labelledby="favourite">
+            <h2 id="favourite">My Favourite Website</h2>
+            <p>
+                You can visit
+                <a href="https://www.youtube.com">YouTube</a>
+                if you want to waste several hours of your life or do so much more. It's the full package.
+            </p>
+            <p>
+                My portfolio website is also a good place to visit,
+                but it is still under construction:
+                <a href="https://davidbesin.github.io/Portfolio/">My Portfolio</a>
+            </p>
+        </section>
 
-    <ul style="list-style-position: inside; font-size: 18px;">
-        <li>Game Development</li>
-        <li>Programming</li>
-        <li>Video Games</li>
-        <li>Still finding out.....</li>
-    </ul>
+        <section aria-labelledby="preview">
+            <h2 id="preview">Gameplay Preview</h2>
+            <figure>
+                <img src="HelloWorld.gif"
+                     alt="Gameplay of a brick-breaker game: a ball bounces off a paddle at the bottom of the screen and breaks grey bricks, with a city skyline and a flock of birds in the background."
+                     width="800" height="450">
+                <figcaption>A short looping clip of a brick-breaker game.</figcaption>
+            </figure>
+        </section>
 
-    <h2 style="color: red; font-family: Georgia, serif;">
-        My Goals
-    </h2>
-
-    <ol style="list-style-position: inside; font-size: 18px;">
-        <li>Become a better programmer</li>
-        <li>Finish my game/games</li>
-        <li>Build more projects</li>
-    </ol>
-
-    <h2 style="color: red; font-family: Georgia, serif;">
-        My Favourite Website
-    </h2>
-
-    <p style="font-size: 18px;">
-        You can visit
-        <a href="https://www.youtube.com" style="color: rgb(68, 5, 5); font-weight: bold;">
-            YouTube
-        </a>
-        if you want to waste several hours of your life or do so much more. Its the full package. 
-        <br><br>
-
-        My portfolio website is also a good place to visit,
-        but it is still under construction:
-        <a href="https://davidbesin.github.io/Portfolio/" style="color: rgb(83, 5, 5); font-weight: bold;">
-            My Portfolio
-        </a>
-    </p>
-
-    <h2 style="color: red; font-family: Georgia, serif;">
-        Take a look at this
-    </h2>
-
-    <img src="HelloWorld.gif"
-         alt="A Hello World GIF"
-         style="width: 300px; border: 3px solid red; border-radius: 10px;">
-
-    <h2 style="color: red; font-family: Georgia, serif;">
-        Some Random Text from w3schools
-    </h2>
-
-    <pre style="font-family: 'Courier New', monospace; font-size: 16px;">
-My Bonnie lies over the ocean.
-
-My Bonnie lies over the sea.
-
-My Bonnie lies over the ocean.
-
-Oh, bring back my Bonnie to me.
-
-My Bonnie Blue.
-    </pre>
+        <section aria-labelledby="lyrics">
+            <h2 id="lyrics">Some Random Text from w3schools</h2>
+            <blockquote>
+                <p>My Bonnie lies over the ocean.</p>
+                <p>My Bonnie lies over the sea.</p>
+                <p>My Bonnie lies over the ocean.</p>
+                <p>Oh, bring back my Bonnie to me.</p>
+                <p>My Bonnie Blue.</p>
+            </blockquote>
+        </section>
+    </main>
 
 </body>
 </html>
