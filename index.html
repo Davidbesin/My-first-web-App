@@ -16,7 +16,7 @@
 
     <hr>
 
-    <main>
+    <main> 
         <section aria-labelledby="about">
             <h2 id="about">About Me</h2>
             <p>
@@ -58,6 +58,9 @@
             </p>
         </section>
 
+    
+        
+
         <section aria-labelledby="preview">
             <h2 id="preview">Gameplay Preview</h2>
             <figure>
@@ -70,15 +73,40 @@
 
         <section aria-labelledby="lyrics">
             <h2 id="lyrics">Some Random Text from w3schools</h2>
-            <blockquote>
+            <blockquote id = "bonnieBluePositive">
                 <p>My Bonnie lies over the ocean.</p>
                 <p>My Bonnie lies over the sea.</p>
                 <p>My Bonnie lies over the ocean.</p>
                 <p>Oh, bring back my Bonnie to me.</p>
                 <p>My Bonnie Blue.</p>
             </blockquote>
-        </section>
-    </main>
+            <blockquote id = "bonnieBlueNegative" style = "display: none;">
+                <p>My Bonnie lies over the ocean.</p>
+                <p>My Bonnie lies over the sea.</p>
+                <p>My Bonnie lies over the ocean.</p>
+                <p>Oh, bring back my Bonnie to me.</p>
+                <p>My Bonnie is not Blue.</p>
+            </blockquote>
 
+            
+            <br>
+            <button id="change-lyrics" onclick="ToggleBonnieBlue()" >Change Lyrics</button>
+        </section>
+        <form id="quiz-form" action="https://example.com/submit" method="post">
+            <h2>Answer this question</h2>
+            <label for="question1">How many planets are in the solar system?</label>
+            <input type="text" id="question1" name="question1" required>
+            <p id="message1"></p>
+            <br>
+
+            <label for="question2">How many moons does Earth have?</label>
+            <input type="text" id="question2" name="question2" required>
+            <p id="message2"></p>
+            <br>
+
+            <button type="button" id="check-btn" onclick="CheckAnswers()">Check Answer</button>
+        </form>
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>
