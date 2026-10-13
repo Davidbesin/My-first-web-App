@@ -53,3 +53,45 @@ function CheckAnswers()
     CheckInput("question2", "message2", 1);
 }
 
+function LoadRepos()
+{
+    var list = document.getElementById("repoList");
+
+    fetch("https://api.github.com/users/Davidbesin/repos?sort=updated&per_page=10")
+        .then(function (response)
+        {
+            if (!response.ok)
+            {
+                throw new Error("GitHub returned " + response.status);
+            }
+            return response.json();
+        })
+        .then(function (repos)
+        {
+            repos.forEach(function (repo)
+            {
+                var date = new Date(repo.created_at).toLocaleDateString("en-GB",
+                {
+                    day: "numeric",
+                    month: "long",
+                    year: "numeric"
+                });
+
+                var description = repo.description ? repo.description : "no description yet";
+                var language = repo.language ? repo.language : "an unspecified language";
+
+                var item = document.createElement("li");
+                item.textContent = repo.name + " was created on " + date +
+                    ". It is about: " + description +
+                    ". The main language is " + language + ".";
+                list.appendChild(item);
+            });
+        })
+        .catch(function (error)
+        {
+            list.textContent = "Could not load projects right now.";
+            console.error("API error:", error);
+        });
+}
+
+LoadRepos();
