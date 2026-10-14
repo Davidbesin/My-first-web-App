@@ -1,12 +1,14 @@
 let bonnieBlue = false;
-var bonnieBluePositive = document.getElementById("bonnieBluePositive");
-var bonnieblueNegative = document.getElementById("bonnieBlueNegative");
 
-var input, message, value;
 
 function ToggleBonnieBlue()
 {
+    
+    const bonnieBluePositive = document.getElementById("bonnieBluePositive");
+    const bonnieblueNegative = document.getElementById("bonnieBlueNegative");
+
     console.log("work0");
+
     if (bonnieBlue)
     {
         bonnieBlue = false;
@@ -23,6 +25,7 @@ function ToggleBonnieBlue()
 
 function CheckInput(inputId, messageId, correctAnswer)
 {
+    var input, message, value;
     input = document.getElementById(inputId);
     message = document.getElementById(messageId);
     value = input.value.trim();
