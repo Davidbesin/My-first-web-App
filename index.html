@@ -4,112 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome to My Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <div class="container py-3 py-md-4">
 
-    <header>
-        <h1>Welcome to My Website</h1>
-        <p>Hello! Welcome… again.</p>
-    </header>
+        <header class="site-header text-white text-center rounded-3 py-5 px-3 mb-3">
+            <h1 class="display-5 fw-bold">Welcome to My Website</h1>
+            <p class="mb-0">Hello! Welcome… again.</p>
+        </header>
 
-    <hr>
+        <hr class="border-dark opacity-100">
 
-    <main> 
-        <section aria-labelledby="about">
-            <h2 id="about">About Me</h2>
-            <p>
-                I'm a computer science student who does programming,
-                game development.
-            </p>
-        </section>
+        <main class="mx-auto text-center text-md-start">
+            <section class="mb-4" aria-labelledby="about">
+                <h2 id="about">About Me</h2>
+                <p>
+                    I'm a computer science student who does programming,
+                    game development.
+                </p>
+            </section>
 
-        <section id="likes-section" aria-labelledby="likes">
-            <h2 id="likes">Things I Like</h2>
-            <ul>
-                <li>Game Development</li>
-                <li>Programming</li>
-                <li>Video Games</li>
-                <li>Still finding out…</li>
-            </ul>
-        </section>
+            <div class="row">
+                <section class="col-md-6 mb-4" id="likes-section" aria-labelledby="likes">
+                    <h2 id="likes">Things I Like</h2>
+                    <ul class="list-unstyled list-md-disc">
+                        <li>Game Development</li>
+                        <li>Programming</li>
+                        <li>Video Games</li>
+                        <li>Still finding out…</li>
+                    </ul>
+                </section>
 
-        <section id="goals-section" aria-labelledby="goals">
-            <h2 id="goals">My Goals</h2>
-            <ol>
-                <li>Become a better programmer</li>
-                <li>Finish my game/games</li>
-                <li>Build more projects</li>
-            </ol>
-        </section>
+                <section class="col-md-6 mb-4" id="goals-section" aria-labelledby="goals">
+                    <h2 id="goals">My Goals</h2>
+                    <ol class="list-unstyled list-md-decimal">
+                        <li>Become a better programmer</li>
+                        <li>Finish my game/games</li>
+                        <li>Build more projects</li>
+                    </ol>
+                </section>
+            </div>
 
-        <section aria-labelledby="favourite">
-            <h2 id="favourite">My Favourite Website</h2>
-            <p>
-                You can visit
-                <a href="https://www.youtube.com">YouTube</a>
-                if you want to waste several hours of your life or do so much more. It's the full package.
-            </p>
-            <p>
-                My portfolio website is also a good place to visit,
-                but it is still under construction:
-                <a href="https://davidbesin.github.io/Portfolio/">My Portfolio</a>
-            </p>
-        </section>
+            <section class="mb-4" aria-labelledby="favourite">
+                <h2 id="favourite">My Favourite Website</h2>
+                <p>
+                    You can visit
+                    <a class="link-dark fw-bold" href="https://www.youtube.com">YouTube</a>
+                    if you want to waste several hours of your life or do so much more. It's the full package.
+                </p>
+                <p>
+                    My portfolio website is also a good place to visit,
+                    but it is still under construction:
+                    <a class="link-dark fw-bold" href="https://davidbesin.github.io/Portfolio/">My Portfolio</a>
+                </p>
+            </section>
 
-    
-        <section id="projects-section" aria-labelledby="projects">
-            <h2 id="projects">My Projects</h2>
-            <ul id="repoList"></ul>
-        </section>
+            <section class="mb-4" id="projects-section" aria-labelledby="projects">
+                <h2 id="projects">My Projects</h2>
+                <ul id="repoList" class="list-group"></ul>
+            </section>
 
-        <section aria-labelledby="preview">
-            <h2 id="preview">Gameplay Preview</h2>
-            <figure>
-                <img src="HelloWorld.gif"
-                     alt="Gameplay of a brick-breaker game: a ball bounces off a paddle at the bottom of the screen and breaks grey bricks, with a city skyline and a flock of birds in the background."
-                     width="800" height="450">
-                <figcaption>A short looping clip of a brick-breaker game.</figcaption>
-            </figure>
-        </section>
+            <section class="mb-4" aria-labelledby="preview">
+                <h2 id="preview">Gameplay Preview</h2>
+                <figure class="figure d-block">
+                    <img src="https://davidbesin.github.io/Portfolio/brickbreaker.gif"
+                         class="figure-img img-fluid rounded-3 border border-3 border-dark preview-img"
+                         alt="Gameplay of a brick-breaker game: a ball bounces off a paddle at the bottom of the screen and breaks grey bricks, with a city skyline and a flock of birds in the background."
+                         width="800" height="450">
+                    <figcaption class="figure-caption">A short looping clip of a brick-breaker game.</figcaption>
+                </figure>
+            </section>
 
-        <section aria-labelledby="lyrics">
-            <h2 id="lyrics">Some Random Text from w3schools</h2>
-            <blockquote id = "bonnieBluePositive">
-                <p>My Bonnie lies over the ocean.</p>
-                <p>My Bonnie lies over the sea.</p>
-                <p>My Bonnie lies over the ocean.</p>
-                <p>Oh, bring back my Bonnie to me.</p>
-                <p>My Bonnie Blue.</p>
-            </blockquote>
-            <blockquote id = "bonnieBlueNegative" style = "display: none;">
-                <p>My Bonnie lies over the ocean.</p>
-                <p>My Bonnie lies over the sea.</p>
-                <p>My Bonnie lies over the ocean.</p>
-                <p>Oh, bring back my Bonnie to me.</p>
-                <p>My Bonnie is not Blue.</p>
-            </blockquote>
+            <section class="mb-4" aria-labelledby="lyrics">
+                <h2 id="lyrics">Some Random Text from w3schools</h2>
+                <blockquote id="bonnieBluePositive" class="mb-0">
+                    <p>My Bonnie lies over the ocean.</p>
+                    <p>My Bonnie lies over the sea.</p>
+                    <p>My Bonnie lies over the ocean.</p>
+                    <p>Oh, bring back my Bonnie to me.</p>
+                    <p>My Bonnie Blue.</p>
+                </blockquote>
+                <blockquote id="bonnieBlueNegative" class="mb-0 d-none">
+                    <p>My Bonnie lies over the ocean.</p>
+                    <p>My Bonnie lies over the sea.</p>
+                    <p>My Bonnie lies over the ocean.</p>
+                    <p>Oh, bring back my Bonnie to me.</p>
+                    <p>My Bonnie is not Blue.</p>
+                </blockquote>
+                <button id="change-lyrics" type="button" class="btn btn-dark mt-3" onclick="ToggleBonnieBlue()">Change Lyrics</button>
+            </section>
 
-            
-            <br>
-            <button id="change-lyrics" onclick="ToggleBonnieBlue()" >Change Lyrics</button>
-        </section>
-        <form id="quiz-form" action="https://example.com/submit" method="post">
-            <h2>Answer this question</h2>
-            <label for="question1">How many planets are in the solar system?</label>
-            <input type="text" id="question1" name="question1" required>
-            <p id="message1"></p>
-            <br>
+            <form id="quiz-form" class="mb-4" action="https://example.com/submit" method="post">
+                <h2>Answer this question</h2>
 
-            <label for="question2">How many moons does Earth have?</label>
-            <input type="text" id="question2" name="question2" required>
-            <p id="message2"></p>
-            <br>
+                <div class="mb-3">
+                    <label for="question1" class="form-label">How many planets are in the solar system?</label>
+                    <input type="text" class="form-control" id="question1" name="question1" required>
+                    <p id="message1" class="mt-2 mb-0"></p>
+                </div>
 
-            <button type="button" id="check-btn" onclick="CheckAnswers()">Check Answer</button>
-        </form>
-    </main>
+                <div class="mb-3">
+                    <label for="question2" class="form-label">How many moons does Earth have?</label>
+                    <input type="text" class="form-control" id="question2" name="question2" required>
+                    <p id="message2" class="mt-2 mb-0"></p>
+                </div>
+
+                <button type="button" id="check-btn" class="btn btn-dark" onclick="CheckAnswers()">Check Answer</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,52 +1,41 @@
 let bonnieBlue = false;
-
+var bonnieBluePositive = document.getElementById("bonnieBluePositive");
+var bonnieBlueNegative = document.getElementById("bonnieBlueNegative");
 
 function ToggleBonnieBlue()
 {
-    
-    const bonnieBluePositive = document.getElementById("bonnieBluePositive");
-    const bonnieblueNegative = document.getElementById("bonnieBlueNegative");
+    bonnieBlue = !bonnieBlue;
+    bonnieBluePositive.classList.toggle("d-none", !bonnieBlue);
+    bonnieBlueNegative.classList.toggle("d-none", bonnieBlue);
+}
 
-    console.log("work0");
-
-    if (bonnieBlue)
-    {
-        bonnieBlue = false;
-        bonnieBluePositive.style.display = "none";
-        bonnieblueNegative.style.display = "block";
-    }
-    else
-    {
-        bonnieBlue = true;
-        bonnieBluePositive.style.display = "block";
-        bonnieblueNegative.style.display = "none";
-    }
+function SetMessage(message, text, colorClass)
+{
+    message.textContent = text;
+    message.classList.remove("text-warning", "text-success", "text-danger");
+    message.classList.add(colorClass);
 }
 
 function CheckInput(inputId, messageId, correctAnswer)
 {
-    var input, message, value;
-    input = document.getElementById(inputId);
-    message = document.getElementById(messageId);
-    value = input.value.trim();
+    var input = document.getElementById(inputId);
+    var message = document.getElementById(messageId);
+    var value = input.value.trim();
 
     // Only whole numbers count as integers
     if (!/^-?\d+$/.test(value))
     {
-        message.textContent = "Please enter a whole number, not text.";
-        message.style.color = "orange";
+        SetMessage(message, "Please enter a whole number, not text.", "text-warning");
         return;
     }
 
     if (parseInt(value, 10) === correctAnswer)
     {
-        message.textContent = "Correct!";
-        message.style.color = "green";
+        SetMessage(message, "Correct!", "text-success");
     }
     else
     {
-        message.textContent = "Wrong, try again.";
-        message.style.color = "red";
+        SetMessage(message, "Wrong, try again.", "text-danger");
     }
 }
 
@@ -84,6 +73,7 @@ function LoadRepos()
                 var language = repo.language ? repo.language : "an unspecified language";
 
                 var item = document.createElement("li");
+                item.className = "list-group-item";
                 item.textContent = repo.name + " was created on " + date +
                     ". It is about: " + description +
                     ". The main language is " + language + ".";
